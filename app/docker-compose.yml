@@ -1,4 +1,6 @@
+# docker-composeのバージョン指定
 version: '3'
+#アプリを動かす為の各要素をserviceと呼ぶ
 services:
   app:
     build: .

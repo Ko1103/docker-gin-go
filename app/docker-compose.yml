@@ -1,9 +1,14 @@
-# docker-composeのバージョン指定
-version: '3'
-#アプリを動かす為の各要素をserviceと呼ぶ
-services:
-  app:
-    build: .
-    ports:
-      - "8080:8080"
+version: "3"
 
+services:
+  gin:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    container_name: api-gin
+    volumes:
+      - ./api/src:/go/src/github.com/Ko1103/docker-gin-go
+    ports:
+      - 8080:8080
+    tty: true
+    command: "/bin/sh"

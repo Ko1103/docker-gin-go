@@ -7,7 +7,7 @@ services:
       dockerfile: ./app/Dockerfile
     container_name: api-gin
     volumes:
-      - ./api/src:/go/src/github.com/Ko1103/docker-gin-go
+      - ./api/src:/go/src/
     ports:
       - 8080:8080
     tty: true
